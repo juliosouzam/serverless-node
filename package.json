@@ -1,0 +1,14 @@
+{
+  "name": "nodeless",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "predeploy": "rm -rf node_modules/sharp && yarn add --plataform linux --arch=x64 sharp",
+    "deploy": "serverless deploy -v",
+    "postdeploy": "rm -rf node_modules/sharp && yarn add sharp"
+  },
+  "dependencies": {
+    "sharp": "^0.24.0"
+  }
+}
