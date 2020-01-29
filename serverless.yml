@@ -18,16 +18,16 @@ functions:
   optimize:
     handler: optimize.handle
     environment:
-      bucket: serverless
+      bucket: nodeserverless
     events:
       - s3:
-          bucket: serverless
+          bucket: nodeserverless
           event: s3:ObjectCreated:*
           rules:
             - prefix: uploads/
             - suffix: .jpg
       - s3:
-          bucket: serverless
+          bucket: nodeserverless
           event: s3:ObjectCreated:*
           rules:
             - prefix: uploads/
